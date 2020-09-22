@@ -1,0 +1,133 @@
+.card {
+	min-width: 300px;
+	width: 85%;
+	max-width: 800px;
+	min-height: 270px;
+	height: 400px;
+	position: relative;
+	border-radius: 15px;
+
+	&:hover {
+		.front-container {
+			opacity: 0;
+			z-index: -5;
+		}
+		.back-container {
+			-webkit-animation: showElement 1s forwards;
+			animation: showElement 1s forwards;
+		}
+		.stats {
+			-webkit-animation: slideIn 1s;
+			animation: slideIn 1s;
+		}
+	}
+}
+
+.front-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	border-radius: 15px;
+
+	position: relative;
+	transition: all 1s;
+	background: #241f1f;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	.front-nickname-container {
+		flex: 4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.nickname {
+			margin-top: 15px;
+			font-size: 1.5rem;
+			color: white;
+			text-align: center;
+			align-self: flex-start;
+			justify-self: flex-start;
+			text-transform: uppercase;
+			transform: rotate(-5deg) skew(-5deg);
+		}
+	}
+	.front-data-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+		.wins {
+			color: $wins;
+		}
+		.losses {
+			color: $losses;
+		}
+		.draws {
+			color: $draws;
+		}
+	}
+	.tank-info {
+		text-align: center;
+		color: $mainFontColor;
+	}
+	.date {
+		color: white;
+		font-size: 1.3rem;
+		text-align: center;
+		color: $mainFontColor;
+	}
+}
+
+.back-container {
+	background: #241f1f;
+
+	height: 100%;
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 15px;
+
+	z-index: -5;
+}
+
+.nickname {
+	text-align: center;
+	color: white;
+	font-size: 1.7rem;
+	margin-bottom: 20px;
+}
+.stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 25px;
+	font-size: 1.2rem;
+	color: $mainFontColor;
+
+	.stat {
+		margin-left: 25%;
+		position: relative;
+		&.stat:hover {
+			.tooltip::before {
+				display: inline-block;
+			}
+		}
+	}
+	.tooltip::before {
+		content: attr(data-tooltip);
+		position: absolute;
+		top: 1.6em;
+		left: 0;
+		font-size: 0.8em;
+		padding: 1px 5px;
+		display: none;
+		color: white;
+		background: rgba(0, 0, 0, 0.65);
+		border-radius: 4px;
+		transition: opacity 0.1s ease-out;
+		z-index: 20;
+		text-align: left;
+	}
+}

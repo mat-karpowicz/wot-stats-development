@@ -1,0 +1,36 @@
+@media screen and(max-width: 425px ) {
+	.front-data-container {
+		font-size: .8rem;
+		.tank-info {
+			font-size: 10px;
+		}
+	}
+}
+@media screen and(max-width: 770px ) {
+	.info {
+		line-height: 1.8rem;
+		font-size: .9rem;
+	}
+	.photo {
+		width: 70%;
+	}
+}
+@media screen and(max-width: 425px ) {
+	.about {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.photo {
+		height: 100px;
+		width: 100px;
+		margin: auto;
+		border-radius: 50%;
+		margin-bottom: 15px;
+	}
+
+	.link {
+		font-size: 2rem;
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "short_name": "WOT API APP",
+  "name": "World Of Tanks - Statistics",
+
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

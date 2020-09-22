@@ -1,0 +1,28 @@
+@import './components/styles/variables.scss';
+@import './app.scss';
+@import './components/styles/navigation.scss';
+@import './components/styles/search.scss';
+@import './components/styles/stats.scss';
+@import './components/styles/card.scss';
+@import './components/styles/about.scss';
+@import './components/styles/error.scss';
+@import './components/styles/loader.scss';
+
+@import './components/styles/media';
+@import './components/styles/keyframes';
+
+*,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Cinzel", serif;
+}
+body {
+	background-image: url("./assets/background3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}

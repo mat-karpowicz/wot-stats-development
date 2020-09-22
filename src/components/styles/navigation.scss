@@ -1,0 +1,28 @@
+.navigation-container {
+	display: flex;
+	width: 100%;
+	min-height: 50px;
+
+	.nav-btn {
+		width: 100%;
+		background: transparent;
+		color: $mainFontColor;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+			outline: none;
+			font-weight: bold;
+			cursor: pointer;
+			-webkit-text-decoration: underline $mainFontColor;
+			text-decoration: underline $mainFontColor;
+		}
+	}
+
+	.active {
+		opacity: 1;
+		font-weight: bold;
+		font-size: 1.2rem;
+		background-color: $navActiveTabBackround;
+	}
+}
