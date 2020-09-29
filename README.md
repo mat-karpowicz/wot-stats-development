@@ -5,6 +5,7 @@
 
 ## General info
 React app serving player in-game statistics from World Of Tanks. Uses official Wargaming World Of Tanks API. Live version hosted on Netlify.
+
 App Live: https://wot-stats.netlify.app/
 
 	
